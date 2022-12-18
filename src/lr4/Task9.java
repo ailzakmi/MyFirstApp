@@ -1,8 +1,58 @@
 package lr4;
 
+import java.util.Arrays;
+import java.util.Objects;
+import java.util.Scanner;
+
 public class Task9 {
     public static void main(String[] args) {
+//        int k = 0, j = 10;
+        Scanner in = new Scanner(System.in);
+////        String letters = "abcdefghijklmnopqrstuvwxyz";
+////        char[] sym = new char[letters.length()];
+////        char[] arr = new char[j];
+        String yes;
+//
+        System.out.print("Введите фразу для шифра: ");
+        String value = in.nextLine();
 
+        System.out.print("Введите ключ для шифра: ");
+        int key = in.nextInt();
+
+        char[] chars = value.toCharArray();
+        int[] ints = new int[value.length()];
+
+        System.out.println("Фраза до преобразования" + Arrays.toString(chars));
+
+        for (int i = 0;i < chars.length;i++) {
+            ints[i] = chars[i] + key;
+            chars[i] = (char) ints[i];
+        }
+
+//        System.out.println("ints после преобразования" + Arrays.toString(ints));
+        System.out.println("Фраза после преобразования" + Arrays.toString(chars));
+
+        while (true) {
+            System.out.println("Выполнить обратное преобразование? (y/n)");
+            yes = in.nextLine();
+            if ((Objects.equals(yes, "y")) || (Objects.equals(yes, "n"))) {
+                break;
+            } else {
+                System.out.println("Введите корректный ответ");
+            }
+        }
+
+        if (yes.equals("y")) {
+            for (int i = 0; i < chars.length; i++) {
+                ints[i] = chars[i] - key;
+                chars[i] = (char) ints[i];
+            }
+
+//            System.out.println("ints после 2-го преобразования" + Arrays.toString(ints));
+            System.out.print("Исходная фраза: " + Arrays.toString(chars));
+        } else {
+            System.out.println("До свидания");
+        }
     }
 }
 
