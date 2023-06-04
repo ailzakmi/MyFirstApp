@@ -7,5 +7,14 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="cn.wanghaomiao.JsoupXpath" level="project" />
+    <orderEntry type="library" name="apache.logging.log4j.core" level="project" />
+    <orderEntry type="library" name="apache.poi" level="project" />
+    <orderEntry type="library" name="apache.poi.ooxml" level="project" />
+    <orderEntry type="library" name="googlecode.json.simple" level="project" />
+    <orderEntry type="library" name="jakarta.mail.api" level="project" />
+    <orderEntry type="library" name="sun.mail.jakarta" level="project" />
+    <orderEntry type="library" name="jakarta.mail.api1" level="project" />
+    <orderEntry type="library" name="eclipse.angus.mail" level="project" />
   </component>
 </module>
