@@ -1,14 +1,12 @@
 package Kurs2023_01;
 
 import java.io.*;
-import java.util.Arrays;
 import java.util.Properties;
 
 import jakarta.mail.*;
 import jakarta.mail.Message;
 import jakarta.mail.internet.MimeMessage;
 import jakarta.mail.internet.MimeUtility;
-import org.eclipse.angus.mail.util.LineInputStream;
 
 public class TLSEmail {
 
@@ -78,7 +76,7 @@ public class TLSEmail {
 
             System.out.println();
             for (Message message: messages) {
-                Address[] toAddress = message.getRecipients(Message.RecipientType.TO);
+//                Address[] toAddress = message.getRecipients(Message.RecipientType.TO);
                 System.out.println("Subject: " + message.getSubject());
                 System.out.println("From: " + message.getFrom()[0]);
 //                System.out.println("Address: " + Arrays.toString(toAddress));

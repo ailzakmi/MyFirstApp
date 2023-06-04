@@ -6,11 +6,8 @@ import jakarta.mail.PasswordAuthentication;
 import jakarta.mail.Session;
 import jakarta.mail.internet.MimeMessage;
 
-import java.io.File;
-import java.io.FileDescriptor;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
-import java.net.InetAddress;
 import java.util.Properties;
 
 public class ParserMail {
@@ -33,7 +30,7 @@ public class ParserMail {
 
 //        Session session = Session.getDefaultInstance(System.getProperties());
         //String pathToMessage = "0";
-        FileInputStream fis = null;
+        FileInputStream fis;
         try {
             fis = new FileInputStream("https://mail.yandex.ru/?uid=1828010344#message/182958734861926401");
         } catch (FileNotFoundException e) {

@@ -228,7 +228,7 @@ public class Primer {
 
         String ct = p.getContentType();
         try {
-            pr("CONTENT-TYPE: " + (new ContentType(ct)).toString());
+            pr("CONTENT-TYPE: " + (new ContentType(ct)));
         } catch (ParseException pex) {
             pr("BAD CONTENT-TYPE: " + ct);
         }
@@ -360,9 +360,9 @@ public class Primer {
         Flags.Flag[] sf = flags.getSystemFlags(); // get the system flags
 
         boolean first = true;
-        for (int i = 0; i < sf.length; i++) {
+        for (Flags.Flag flag : sf) {
             String s;
-            Flags.Flag f = sf[i];
+            Flags.Flag f = flag;
             if (f == Flags.Flag.ANSWERED)
                 s = "\\Answered";
             else if (f == Flags.Flag.DELETED)
@@ -385,14 +385,14 @@ public class Primer {
         }
 
         String[] uf = flags.getUserFlags(); // get the user flag strings
-        for (int i = 0; i < uf.length; i++) {
+        for (String s : uf) {
             if (first)
                 first = false;
             else
                 sb.append(' ');
-            sb.append(uf[i]);
+            sb.append(s);
         }
-        pr("FLAGS: " + sb.toString());
+        pr("FLAGS: " + sb);
 
         // X-MAILER
         String[] hdrs = m.getHeader("X-Mailer");

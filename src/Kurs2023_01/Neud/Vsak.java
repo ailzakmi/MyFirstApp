@@ -3,7 +3,6 @@ package Kurs2023_01.Neud;
 import jakarta.mail.*;
 import jakarta.mail.internet.MimeMessage;
 
-import java.net.InetAddress;
 import java.util.Date;
 import java.util.Properties;
 
@@ -12,7 +11,7 @@ public class Vsak {
     public static void main(String[] args) {
         final String fromEmail = "ZhduSoobshcheniya@yandex.ru"; //requires valid gmail id
         final String password = "Niktonevzlomaetdo30"; // correct password for gmail id
-        final String toEmail = "myemail@yahoo.com"; // can be any email id
+//        final String toEmail = "myemail@yahoo.com"; // can be any email id
 //        Properties props = new Properties();
 //        props.put("smtp.yandex.ru", "ZhduSoobshcheniya@yandex.ru");
 
@@ -44,24 +43,24 @@ public class Vsak {
         }
     }
 
-    private static final Authenticator authenticator = new Authenticator() {
-
-        @Override
-        protected PasswordAuthentication getPasswordAuthentication() {
-            //return new PasswordAuthentication(
-            //        this.getDefaultUserName(),
-            //        PropUtils.getPassword()
-            //);
-            return new PasswordAuthentication(
-                    "koe_kak.86@mail.ru",
-                    "Nfyrb_yf_ghjrfxre2020KV"
-            );
-
-
-
-        }
-        //PasswordAuthentication PropUtils;
-    };
+//    private static final Authenticator authenticator = new Authenticator() {
+//
+//        @Override
+//        protected PasswordAuthentication getPasswordAuthentication() {
+//            //return new PasswordAuthentication(
+//            //        this.getDefaultUserName(),
+//            //        PropUtils.getPassword()
+//            //);
+//            return new PasswordAuthentication(
+//                    "koe_kak.86@mail.ru",
+//                    "Nfyrb_yf_ghjrfxre2020KV"
+//            );
+//
+//
+//
+//        }
+//        //PasswordAuthentication PropUtils;
+//    };
 }
 
 //        mail.transport.protocol = smtps
