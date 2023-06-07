@@ -4,10 +4,7 @@ import jakarta.mail.*;
 import jakarta.mail.internet.InternetAddress;
 import jakarta.mail.internet.MimeMessage;
 
-import java.io.DataOutputStream;
 import java.util.Properties;
-
-import static Kurs2023_01.Vlog.sendAttachmentEmail;
 
 public class TrasetEmail {
     public static void main(String[] args) {

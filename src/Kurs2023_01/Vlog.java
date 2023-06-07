@@ -10,7 +10,6 @@ import jakarta.mail.internet.MimeMessage;
 import jakarta.mail.internet.MimeMultipart;
 
 
-import java.io.UnsupportedEncodingException;
 import java.util.Date;
 
 public class Vlog {
@@ -54,7 +53,7 @@ public class Vlog {
             messageBodyPart = new MimeBodyPart();
             String filename = "abc.txt";
             DataSource source = new FileDataSource(filename);
-            messageBodyPart.setDataHandler(new DataHandler((jakarta.activation.DataSource) source));
+            messageBodyPart.setDataHandler(new DataHandler(source));
             messageBodyPart.setFileName(filename);
             multipart.addBodyPart(messageBodyPart);
 

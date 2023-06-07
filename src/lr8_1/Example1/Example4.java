@@ -31,9 +31,10 @@ public class Example4 {
                 while (true) {
                     float number = rd.readFloat();
                     wr.writeFloat(number);
-                    System.out.println("Число " + (float) number);
+                    System.out.println("Число " + number);
                 }
             } catch (EOFException e) {
+                System.out.println(e);
             }
             wr.flush();
             wr.close();

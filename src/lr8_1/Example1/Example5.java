@@ -30,7 +30,7 @@ public class Example5 {
                 System.out.println(dln.readUTF());
             }
         } catch (Exception e) {
-            System.out.println("" + e);
+            System.out.println(" " + e);
         }
     }
 }

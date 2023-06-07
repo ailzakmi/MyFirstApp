@@ -1,6 +1,5 @@
 package lr10.Example4;
 
-import lr10_1.Example3.NewsParser;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
@@ -9,14 +8,15 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.util.Objects;
 import java.util.Scanner;
 
 public class ReadEXEL {
     public static void main(String[] args) throws IOException {
-        main(args, 0);
+        maining(0);
     }
 
-    public static void main(String[] args, int i) throws IOException {
+    public static void maining(int i) throws IOException {
         Scanner in = new Scanner(System.in);
         try {
 
@@ -31,7 +31,7 @@ public class ReadEXEL {
                 filePath = in.nextLine();
             }
 
-            FileInputStream inputStream = new FileInputStream(filePath);
+            FileInputStream inputStream = new FileInputStream(Objects.requireNonNull(filePath));
 
             XSSFWorkbook workbook = new XSSFWorkbook(inputStream);
 
@@ -52,7 +52,7 @@ public class ReadEXEL {
             System.out.println("Попробовать снова? (yes/no) (да/нет)");
             String why = in.nextLine();
             if (why.equals("y") | why.equals("yes") | why.equals("д") | why.equals("да")) {
-                ReadEXEL.main(args,1);
+                ReadEXEL.maining(1);
             }
 
         }

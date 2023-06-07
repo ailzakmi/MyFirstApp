@@ -1,8 +1,5 @@
 package lr7_1.Example1;
 
-import lr7_1.Example1.subClassTest;
-import lr7_1.Example1.superClassTest;
-
 public class Main {
     public static void main(String[] args) {
         superClassTest superClassObject = new superClassTest("передал в конструктор суперкласса");

@@ -4,7 +4,6 @@ import java.io.DataOutputStream;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.InputStream;
-import java.util.Objects;
 
  /*
     Тут можно реализовать обработку файла.
@@ -27,12 +26,10 @@ public class FileEdit extends SSLEmail {
 
     private boolean min(String str, InputStream in) {
         boolean sos = false;
-        if ((str == null) || (in == null)) {
-            sos = false;
-        } else {
+        if ((str != null) & (in != null)) {
             try {
                 File fiska = new File("src\\Kurs2023_01\\temp\\"+str);
-                fiska.createNewFile();
+//                fiska.createNewFile();
                 if (fiska.exists()) {
                     System.out.println("Создан!!!!");
                     System.out.println("Полный путь: " + fiska.getAbsolutePath());
