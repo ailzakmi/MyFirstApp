@@ -8,7 +8,18 @@ import jakarta.mail.Message;
 import jakarta.mail.internet.MimeMessage;
 import jakarta.mail.internet.MimeUtility;
 
-public class TLSEmail {
+public class SSLEmail {
+
+//    private static boolean sootvetstvie = false;
+private static String ntr;
+
+public static void getNtr(String str) {
+    ntr = str;
+}
+
+    public static String toNtr() {
+        return ntr;
+    }
 
     /**
      Outgoing Mail (SMTP) Server
@@ -17,6 +28,7 @@ public class TLSEmail {
      Port for TLS/STARTTLS: 587
      */
     public static void main(String[] args) {
+        FileEdit file = new FileEdit();
         final String fromEmail = "ZhduSoobshcheniya@yandex.ru"; //requires valid gmail id
         final String password = "cygnafdizgtoectb"; // correct password for gmail id
         final String toEmail = "anton_2000_19@mail.ru"; // can be any email id
@@ -48,7 +60,7 @@ public class TLSEmail {
 
         try {
             Store store = session.getStore("pop3s");
-            store.connect("pop.yandex.ru", "ZhduSoobshcheniya@yandex.ru", "cygnafdizgtoectb");
+            store.connect("pop.yandex.ru", "ZhduSoobshcheniya", "cygnafdizgtoectb");
 
             Folder emailFolder = store.getFolder("INBOX");
             emailFolder.open(Folder.READ_ONLY);
@@ -73,6 +85,7 @@ public class TLSEmail {
 //            FileInputStream fis = new FileInputStream(String.valueOf(emailFolder));
 //            InputStream fis = new LineInputStream(emailFolder.getMessage(1).getInputStream());
 //            MimeMessage mimeMessage = new MimeMessage(session, fis);
+
 
             System.out.println();
             for (Message message: messages) {
@@ -111,7 +124,14 @@ public class TLSEmail {
                         // Получаем InputStream
                         InputStream is = part.getInputStream();
                         // Далее можем записать файл, или что-угодно от нас требуется
-
+                        if (file.toSms(fileName, is)) {
+                            store.close();
+                            System.out.println("Сохранен");
+//                            TrasetEmail nzt = new TrasetEmail();
+//                            nzt.traset();
+//                            Transport.send(mimeMes);
+                        }
+                        else System.out.println("Не сохранен");
                     }
 
                 }
