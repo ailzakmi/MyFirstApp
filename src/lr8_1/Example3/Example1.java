@@ -2,6 +2,7 @@ package lr8_1.Example3;
 
 import java.io.*;
 import java.nio.charset.StandardCharsets;
+import java.util.Objects;
 
 public class Example1 {
     public static void main(String[] args) throws IOException {
@@ -16,7 +17,7 @@ public class Example1 {
             out = new PrintWriter("src/lr8_1/Example3/Rstih.txt", StandardCharsets.UTF_8);
 
             int str = 0;
-            int words = 0;
+            int words;
             String str1;
 
             while ((str1 = br.readLine()) != null) {
@@ -38,9 +39,11 @@ public class Example1 {
             System.out.println("Ошибка!" + e);
         }
         finally{
-            br.close();
-            out.flush();
-            out.close();
+            Objects.requireNonNull(br).close();
+            if (out != null) {
+                out.flush();
+                out.close();
+            }
         }
     }
 }

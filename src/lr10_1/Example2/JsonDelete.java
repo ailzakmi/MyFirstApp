@@ -13,13 +13,11 @@ public class JsonDelete {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
         JSONParser parser = new JSONParser();
-        Object obj = null;
+        Object obj;
         try {
             obj = parser
                     .parse(new FileReader("src/lr10/example2/example-json.json"));
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        } catch (ParseException e) {
+        } catch (IOException | ParseException e) {
             throw new RuntimeException(e);
         }
         JSONObject library =  (JSONObject) obj;

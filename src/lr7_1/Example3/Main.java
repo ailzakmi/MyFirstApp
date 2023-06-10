@@ -6,13 +6,13 @@ public class Main {
         String supVoz = supTest.toString();
         System.out.println(supVoz);
 
-        sub1 sub1Test = new sub1('m', 416);
-        String sub1Voz = sub1Test.toString();
-        System.out.println(sub1Voz);
+//        sub1 sub1Test = new sub1('m', 416);
+//        String sub1Voz = sub1Test.toString();
+//        System.out.println(sub1Voz);
 
-        sub2 sub2Test = new sub2("ответьте", 415, 'b');
-        String sub2Voz = sub2Test.toString();
-        System.out.println(sub2Voz);
+//        sub2 sub2Test = new sub2("ответьте", 415, 'b');
+//        String sub2Voz = sub2Test.toString();
+//        System.out.println(sub2Voz);
     }
 }
 //Напишите программу, в которой на основе суперкласса создается подкласс, а на

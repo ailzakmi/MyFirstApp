@@ -35,8 +35,7 @@ public class Example4 {
                 }
             } catch (EOFException e) {
                 System.out.println(e);
-                    System.out.println("Число " + (float) number);
-                }
+            }
             wr.flush();
             wr.close();
             rd.close();

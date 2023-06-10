@@ -16,7 +16,7 @@ public class Main {
             BufferedReader bufferedReader =
                     oj ? new BufferedReader(new InputStreamReader(System.in)) :
                          new BufferedReader(new FileReader(inputFileName));
-            String readLine = "";
+            String readLine;
             int numberOfFriends = 0, numberOfPairs = 0;
 
             while ((readLine = bufferedReader.readLine()) != null) {

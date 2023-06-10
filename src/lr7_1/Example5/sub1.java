@@ -15,7 +15,7 @@ public class sub1 extends sup {
     }
     public void classPrint() {
         String sub1Class;
-        sub1Class = "" + this.getInt1();
+        sub1Class = " " + this.getInt1();
         super.classPrint();
         System.out.println(sub1Class);
     }

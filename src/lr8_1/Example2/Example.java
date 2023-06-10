@@ -45,9 +45,15 @@ public class Example {
         }catch(IOException e){
             System.out.println("Ошибка: " + e);
         } finally{
-            br.close();
-            bw.flush();
-            bw.close();
+            if (br != null) {
+                br.close();
+
+            }
+            if (bw != null) {
+                bw.flush();
+                bw.close();
+            }
+
         }
     }
 }

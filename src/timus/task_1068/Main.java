@@ -12,7 +12,7 @@ public class Main {
                 b = b + i;
             }
             System.out.println(b);
-        } else if (a <= 0) {
+        } else {
             for (int i = a; i <= 1; i++) {
                 b = b + i;
             }
