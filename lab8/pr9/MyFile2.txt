@@ -1,0 +1,5 @@
+1: zapolnajem
+2: perevod perevodov
+3: per per per
+4: aoe
+5: autinfikaciaj
