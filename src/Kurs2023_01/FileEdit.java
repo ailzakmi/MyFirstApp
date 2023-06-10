@@ -9,47 +9,37 @@ import java.io.InputStream;
     Тут можно реализовать обработку файла.
  */
 
-public class FileEdit extends SSLEmail {
-//    private String ntr;
-    public boolean toSms() {
-        return min(null,null);
+public class FileEdit{
+    private String filePut = "";
+    public void toSms (String fileName, InputStream inputStream) {
+        min(fileName,inputStream);
     }
-    public boolean toSms(String str) {
-        return min(str,null);
+    public String getFilePut(){
+        return filePut;
     }
-    public boolean toSms(InputStream in) {
-        return min(null,in);
-    }
-    public boolean toSms(String str, InputStream in) {
-        return min(str,in);
-    }
-
-    private boolean min(String str, InputStream in) {
-        boolean sos = false;
-        if ((str != null) & (in != null)) {
+    private void min(String fileName, InputStream inputStream) {
+        if ((fileName != null) & (inputStream != null)) {
             try {
-                File fiska = new File("src\\Kurs2023_01\\temp\\"+str);
-//                fiska.createNewFile();
+                File fiska = new File("src\\Kurs2023_01\\temp\\"+fileName);
+
                 if (fiska.exists()) {
                     System.out.println("Создан!!!!");
                     System.out.println("Полный путь: " + fiska.getAbsolutePath());
                 }
                 DataOutputStream dOut = new DataOutputStream(new FileOutputStream(fiska));
-//                dOut.writeUTF(String.valueOf(in));
-                dOut.write(in.readAllBytes());
+                dOut.write(inputStream.readAllBytes());
 
-                getNtr(fiska.getAbsolutePath());
+                filePut = fiska.getAbsolutePath();
+
                 dOut.flush();
                 dOut.close();
-                sos = true;
+                System.out.println("Сохранен");
             } catch (Exception e) {
+                System.out.println("Не сохранен");
                 System.out.println("Ошибка!!! " + e);
             }
+        } else {
+            System.out.println("Не сохранен");
         }
-        return sos;
     }
-
-//    public String getNTR() {
-//        return ntr;
-//    }
 }

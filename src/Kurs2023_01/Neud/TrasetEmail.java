@@ -1,4 +1,4 @@
-package Kurs2023_01;
+package Kurs2023_01.Neud;
 
 import jakarta.mail.*;
 import jakarta.mail.internet.InternetAddress;
