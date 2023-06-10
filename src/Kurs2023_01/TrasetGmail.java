@@ -18,11 +18,8 @@ public class TrasetGmail {
     }
     public void traset(String tema,String text,String filePut) {
         final String fromEmail = "javaxmising@gmail.com"; //requires valid gmail id
-//        final String password = "VsegdaBiTak1"; // correct password for gmail id
-        //TochnoNeVzlomaut!!!
         final String password = "vuqrhqonibovtarq"; // correct password for gmail id
         final String toEmailOut = "anton_2000_19@mail.ru"; // can be any email id
-//        String file;
 
         // Необходимые настройки для отправки
         Properties propsOut = new Properties();
@@ -64,7 +61,7 @@ public class TrasetGmail {
 
             // Извлечение имени файла из пути до файла
             int all,alk = 0;
-            String fileName = "";
+            StringBuilder fileName = new StringBuilder();
             char[] fileArr = filePut.toCharArray();
             for (int i = 0;i<filePut.length();i++) {
                 if (fileArr[i] == '\\') {
@@ -72,14 +69,14 @@ public class TrasetGmail {
                 }
             }
             for (all=alk+1;all<filePut.length();all++) {
-                fileName = fileName + fileArr[all];
+                fileName.append(fileArr[all]);
             }
             System.out.println(fileName);
 
             // Запаковка сообщения
             FileDataSource source = new FileDataSource(filePut);    // Достаём файл
             mesBodyPart.setDataHandler(new DataHandler(source)); // Ложим файл в Body
-            mesBodyPart.setFileName(fileName);  // Даём файлу имя
+            mesBodyPart.setFileName(fileName.toString());  // Даём файлу имя
             multipart.addBodyPart(mesBodyPart); // Покуем Body
             message.setContent(multipart);      // Добавляем вложение к сообщению
 //            message.setText(text);              // Добавляем текст к сообщению

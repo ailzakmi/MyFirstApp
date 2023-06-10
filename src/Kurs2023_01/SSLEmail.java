@@ -13,10 +13,9 @@ public class SSLEmail {
     public static void main(String[] args) {
         FileEdit file = new FileEdit();
         TrasetGmail trasetGmail = new TrasetGmail();
-        String tema = "",text = "",filePut = "";
+        String tema = "",text = "",filePut;
         final String fromEmail = "javaxmising@gmail.com"; //requires valid gmail id
         final String password = "vuqrhqonibovtarq"; // correct password for gmail id
-        final String toEmail = "anton_2000_19@mail.ru"; // can be any email id
 
         System.out.println("TLSEmail Start");
 //        Properties props = new Properties();
