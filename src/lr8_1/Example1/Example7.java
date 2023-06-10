@@ -1,6 +1,7 @@
 package lr8_1.Example1;
 
 import java.io.*;
+import java.util.Objects;
 
 public class Example7 {
     public static void main(String[] args) throws IOException {
@@ -21,9 +22,11 @@ public class Example7 {
             System.out.println("Ошибка!!!!!");
         }
         finally {
-            br.close();
-            out.flush();
-            out.close();
+            Objects.requireNonNull(br).close();
+            if (out != null) {
+                out.flush();
+                out.close();
+            }
         }
     }
 }

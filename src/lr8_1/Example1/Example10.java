@@ -1,10 +1,11 @@
 package lr8_1.Example1;
 
 import java.io.*;
+import java.util.Objects;
 
 public class Example10 {
     public static void main(String[] args) {
-        BufferedReader br = null;
+        BufferedReader br;
         PrintWriter out = null;
         try {
             br = new BufferedReader(new InputStreamReader(
@@ -21,7 +22,7 @@ public class Example10 {
         }
         finally {
             //br.close();
-            out.flush();
+            Objects.requireNonNull(out).flush();
             out.close();
         }
     }
