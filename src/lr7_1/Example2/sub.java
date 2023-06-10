@@ -47,7 +47,6 @@ public class sub extends sup {
     }
 
     public String toString() {
-        String subClass = getStr2() + " " + getStr2l() + " " + getInt1();
-        return subClass;
+        return getStr2() + " " + getStr2l() + " " + getInt1();
     }
 }

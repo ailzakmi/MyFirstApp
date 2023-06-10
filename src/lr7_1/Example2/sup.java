@@ -19,7 +19,6 @@ public class sup {
         return str1.length();
     }
     public String toString() {
-        String supClass = getStr1() + " " + getStr1l();
-        return supClass;
+        return getStr1() + " " + getStr1l();
     }
 }
