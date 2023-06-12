@@ -50,7 +50,7 @@ public class NewParser {
             }
         }
         catch (UnknownHostException exception) {
-            System.out.println(exception);
+            System.out.println(exception+" ");
             System.out.println("Повторить подключение? (yes/no) (да/нет)");
             String why = in.nextLine();
             if (why.equals("y") | why.equals("yes") | why.equals("д") | why.equals("да")) {
