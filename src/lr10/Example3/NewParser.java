@@ -1,6 +1,5 @@
 package lr10.Example3;
 
-import lr10_1.Example3.NewsParser;
 import org.apache.commons.io.output.TeeOutputStream;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
@@ -55,7 +54,7 @@ public class NewParser {
             System.out.println("Повторить подключение? (yes/no) (да/нет)");
             String why = in.nextLine();
             if (why.equals("y") | why.equals("yes") | why.equals("д") | why.equals("да")) {
-                NewsParser.main(args);
+                NewParser.main(args);
             }
         }
     }
