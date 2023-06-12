@@ -2,7 +2,7 @@ package lr11.Example9;
 
 import java.util.*;
 
-public class Task {
+public class Task9 {
     private static final int ELEMENTS_COUNT = 7000000;
     private static final int ELEMENTS_COUNT2 = 700000000;
     public static void main(String[] args) {
@@ -239,7 +239,7 @@ public class Task {
 
     public static long getSearchTimeSortedSet(SortedSet<Integer> sortedSet) {
         for(int i = 0; i < ELEMENTS_COUNT2; i++) {
-            sortedSet.add(i);
+            sortedSet.add(i);//22
         }
         long startTime = System.nanoTime();
         for (int i = 0; i < ELEMENTS_COUNT2; i++) {
