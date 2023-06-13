@@ -12,7 +12,7 @@ public class Task10 {
         System.out.print("¬ведите размер массива: ");
         int size = in.nextInt();
 
-        List<Integer> list = new ArrayList<Integer>(size);
+        List<Integer> list = new ArrayList<>(size);
         Random random = new Random();
 
         for (int i = 0; i < size; i++) {
