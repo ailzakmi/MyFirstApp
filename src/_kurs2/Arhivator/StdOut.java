@@ -1,13 +1,13 @@
 package _kurs2.Arhivator;
 
-/******************************************************************************
+/*
  *  Compilation:  javac StdOut.java
  *  Execution:    java StdOut
  *  Dependencies: none
  *
  *  Writes data of various types to standard output.
  *
- ******************************************************************************/
+ */
 
 import java.io.OutputStreamWriter;
 import java.io.PrintWriter;

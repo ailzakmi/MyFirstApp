@@ -1,6 +1,6 @@
 package _kurs2.Arhivator;
 
-/******************************************************************************
+/*
  *  Compilation:  javac ResizingArrayQueue.java
  *  Execution:    java ResizingArrayQueue < input.txt
  *  Dependencies: StdIn.java StdOut.java
@@ -11,7 +11,7 @@ package _kurs2.Arhivator;
  *  % java ResizingArrayQueue < tobe.txt
  *  to be or not to be (2 left on queue)
  *
- ******************************************************************************/
+ */
 
 import java.util.Iterator;
 import java.util.NoSuchElementException;

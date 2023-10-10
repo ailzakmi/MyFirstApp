@@ -1,6 +1,6 @@
 package _kurs2.Arhivator;
 
-/******************************************************************************
+/*
  *  Compilation:  javac BinaryOut.java
  *  Execution:    java BinaryOut
  *  Dependencies: none
@@ -12,7 +12,7 @@ package _kurs2.Arhivator;
  *
  *  The bytes written are not aligned.
  *
- ******************************************************************************/
+ */
 
 import java.io.BufferedOutputStream;
 import java.io.FileOutputStream;
@@ -340,7 +340,7 @@ public final class BinaryOut {
 
 }
 
-/******************************************************************************
+/*
  *  Copyright 2002-2022, Robert Sedgewick and Kevin Wayne.
  *
  *  This file is part of algs4.jar, which accompanies the textbook
@@ -362,4 +362,4 @@ public final class BinaryOut {
  *
  *  You should have received a copy of the GNU General Public License
  *  along with algs4.jar.  If not, see http://www.gnu.org/licenses.
- ******************************************************************************/
+ */

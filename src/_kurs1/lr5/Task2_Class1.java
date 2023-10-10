@@ -4,8 +4,8 @@ import java.util.Arrays;
 
 public class Task2_Class1 {
     private char[] simvol = new char[1];
-    private int[] intSim1 = new int[1];
-    private int[] intSim2 = new int[1];
+    private final int[] intSim1 = new int[1];
+    private final int[] intSim2 = new int[1];
 
     public void setSimvol1(String simvol) {
         this.simvol =  simvol.toCharArray();

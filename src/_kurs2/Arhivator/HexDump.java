@@ -1,6 +1,6 @@
 package _kurs2.Arhivator;
 
-/******************************************************************************
+/*
  *  Compilation:  javac HexDump.java
  *  Execution:    java HexDump < file
  *  Dependencies: BinaryStdIn.java StdOut.java
@@ -24,7 +24,7 @@ package _kurs2.Arhivator;
  *  0000000 41 42 52 41 43 41 44 41 42 52 41 21
  *  0000014
  *
- ******************************************************************************/
+ */
 
 /**
  *  The {@code HexDump} class provides a client for displaying the contents

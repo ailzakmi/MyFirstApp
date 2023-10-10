@@ -1,7 +1,7 @@
 package _kurs1.lr5;
 
 public class Task4_Class1 {
-    private char[] simvol = new char[1];
+    private final char[] simvol = new char[1];
     private int intSim1;
     private int intSim2;
     String all;

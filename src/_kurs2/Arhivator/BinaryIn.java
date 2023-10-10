@@ -1,6 +1,6 @@
 package _kurs2.Arhivator;
 
-/******************************************************************************
+/*
  *  Compilation:  javac BinaryIn.java
  *  Execution:    java BinaryIn input output
  *  Dependencies: none
@@ -9,7 +9,7 @@ package _kurs2.Arhivator;
  *
  *  % java BinaryIn https://introcs.cs.princeton.edu/java/cover.png output.png
  *
- ******************************************************************************/
+ */
 
 import java.io.BufferedInputStream;
 import java.io.File;
@@ -267,7 +267,7 @@ public final class BinaryIn {
         for (int i = 0; i < 2; i++) {
             char c = readChar();
             x <<= 8;
-            x |= c;
+            x |= (short) c;
         }
         return x;
     }
@@ -380,7 +380,7 @@ public final class BinaryIn {
     }
 }
 
-/******************************************************************************
+/*
  *  Copyright 2002-2022, Robert Sedgewick and Kevin Wayne.
  *
  *  This file is part of algs4.jar, which accompanies the textbook
@@ -402,4 +402,4 @@ public final class BinaryIn {
  *
  *  You should have received a copy of the GNU General Public License
  *  along with algs4.jar.  If not, see http://www.gnu.org/licenses.
- ******************************************************************************/
+ */

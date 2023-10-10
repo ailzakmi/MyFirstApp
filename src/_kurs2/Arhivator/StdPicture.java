@@ -1,11 +1,11 @@
 package _kurs2.Arhivator;
 
-/******************************************************************************
+/*
  *  Compilation:  javac StdPicture.java
  *  Execution:    java StdPicture filename.jpg
  *  Dependencies: Picture.java
  *
- ******************************************************************************/
+ */
 
 
 /**

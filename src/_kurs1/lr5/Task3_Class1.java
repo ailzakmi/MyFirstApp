@@ -4,7 +4,7 @@ import java.util.Random;
 
 public class Task3_Class1 {
     private int intSim;
-    private Random random = new Random();
+    private final Random random = new Random();
     private String all;
 
     public void setSimvol(String simvol) {

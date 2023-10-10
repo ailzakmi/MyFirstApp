@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public class Task1_Class1 {
 
-    private char[] smt = new char[1];
+    private final char[] smt = new char[1];
     private char sivol;
     private String text;
 

@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public class Task7_Class1 {
     private int[] arr;
-    private char[] simvol = new char[1];
+    private final char[] simvol = new char[1];
     public Task7_Class1() {
     }
     public void setk(int k) {

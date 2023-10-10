@@ -1,6 +1,6 @@
 package _kurs2.Arhivator;
 
-/******************************************************************************
+/*
  *  Compilation:  javac BinaryDump.java
  *  Execution:    java BinaryDump n < file
  *  Dependencies: BinaryStdIn.java
@@ -20,7 +20,7 @@ package _kurs2.Arhivator;
  *  0100000100100001
  *  96 bits
  *
- ******************************************************************************/
+ */
 
 /**
  *  The {@code BinaryDump} class provides a client for displaying the contents

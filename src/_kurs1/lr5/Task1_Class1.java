@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public class Task1_Class1 {
     private char[] simvol = new char[1];
-    private int[] intSim = new int[1];
+    private final int[] intSim = new int[1];
     private String znac;
 
     public void setSimvol(String simvol) {

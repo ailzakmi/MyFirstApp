@@ -1,6 +1,6 @@
 package _kurs2.Arhivator;
 
-/******************************************************************************
+/*
  *  Compilation:  javac StdDraw.java
  *  Execution:    java StdDraw
  *  Dependencies: none
@@ -27,7 +27,7 @@ package _kurs2.Arhivator;
  *    -  don't use AffineTransform for rescaling since it inverts
  *       images and strings
  *
- ******************************************************************************/
+ */
 
 import java.awt.BasicStroke;
 import java.awt.Color;
@@ -634,7 +634,7 @@ public final class StdDraw implements ActionListener, MouseListener, MouseMotion
     private static Graphics2D offscreen, onscreen;
 
     // singleton for callbacks: avoids generation of extra .class files
-    private static StdDraw std = new StdDraw();
+    private static final StdDraw std = new StdDraw();
 
     // the frame for drawing to the screen
     private static JFrame frame;
@@ -791,9 +791,9 @@ public final class StdDraw implements ActionListener, MouseListener, MouseMotion
     }
 
 
-    /***************************************************************************
+    /*
      *  Set the title of standard drawing window.
-     ***************************************************************************/
+     */
 
     /**
      * Sets the title of the standard drawing window to the specified string.
@@ -807,9 +807,9 @@ public final class StdDraw implements ActionListener, MouseListener, MouseMotion
         windowTitle = title;
     }
 
-    /***************************************************************************
+    /*
      *  User and screen coordinate systems.
-     ***************************************************************************/
+     */
 
     /**
      * Sets the <em>x</em>-scale to the default range (between 0.0 and 1.0).
@@ -1041,9 +1041,9 @@ public final class StdDraw implements ActionListener, MouseListener, MouseMotion
     }
 
 
-    /***************************************************************************
+    /*
      *  Drawing geometric shapes.
-     ***************************************************************************/
+     */
 
     /**
      * Draws a line segment between (<em>x</em><sub>0</sub>, <em>y</em><sub>0</sub>) and
@@ -1456,13 +1456,14 @@ public final class StdDraw implements ActionListener, MouseListener, MouseMotion
         return icon.getImage();
     }
 
-    /***************************************************************************
+    /*
      * [Summer 2016] Should we update to use ImageIO instead of ImageIcon()?
      *               Seems to have some issues loading images on some systems
      *               and slows things down on other systems.
      *               especially if you don't call ImageIO.setUseCache(false)
      *               One advantage is that it returns a BufferedImage.
-     ***************************************************************************/
+     */
+
 /*
     private static BufferedImage getImage(String filename) {
         if (filename == null) throw new IllegalArgumentException();
@@ -1653,9 +1654,9 @@ public final class StdDraw implements ActionListener, MouseListener, MouseMotion
         draw();
     }
 
-    /***************************************************************************
+    /*
      *  Drawing text.
-     ***************************************************************************/
+     */
 
     /**
      * Writes the given text string in the current font, centered at (<em>x</em>, <em>y</em>).
@@ -1817,9 +1818,9 @@ public final class StdDraw implements ActionListener, MouseListener, MouseMotion
     }
 
 
-    /***************************************************************************
+    /*
      *  Save drawing to a file.
-     ***************************************************************************/
+     */
 
     /**
      * Saves the drawing to using the specified filename.
@@ -1830,7 +1831,7 @@ public final class StdDraw implements ActionListener, MouseListener, MouseMotion
      */
     public static void save(String filename) {
         validateNotNull(filename, "filename");
-        if (filename.length() == 0) throw new IllegalArgumentException("argument to save() is the empty string");
+        if (filename.isEmpty()) throw new IllegalArgumentException("argument to save() is the empty string");
         File file = new File(filename);
         String suffix = filename.substring(filename.lastIndexOf('.') + 1);
         if (!filename.contains(".")) suffix = "";
@@ -1868,9 +1869,9 @@ public final class StdDraw implements ActionListener, MouseListener, MouseMotion
     }
 
 
-    /***************************************************************************
+    /*
      *  Mouse interactions.
-     ***************************************************************************/
+     */
 
     /**
      * Returns true if the mouse is being pressed.
@@ -1988,9 +1989,9 @@ public final class StdDraw implements ActionListener, MouseListener, MouseMotion
     }
 
 
-    /***************************************************************************
+    /*
      *  Keyboard interactions.
-     ***************************************************************************/
+     */
 
     /**
      * Returns true if the user has typed a key (that has not yet been processed).

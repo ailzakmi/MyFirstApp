@@ -1,6 +1,6 @@
 package _kurs2.Arhivator;
 
-/******************************************************************************
+/*
  *  Compilation:  javac PictureDump.java
  *  Execution:    java PictureDump width height < file
  *  Dependencies: BinaryStdIn.java Picture.java
@@ -14,7 +14,7 @@ package _kurs2.Arhivator;
  *
  *  % java PictureDump 16 6 < abra.txt
  *
- ******************************************************************************/
+ */
 
 import java.awt.Color;
 

@@ -1,6 +1,6 @@
 package _kurs2.Arhivator;
 
-/******************************************************************************
+/*
  *  Compilation:  javac TST.java
  *  Execution:    java TST < words.txt
  *  Dependencies: StdIn.java
@@ -36,7 +36,7 @@ package _kurs2.Arhivator;
  *  --------
  *    - can't use a key that is the empty string ""
  *
- ******************************************************************************/
+ */
 
 //import java.util.Queue;
 
@@ -111,7 +111,7 @@ public class TST<Value> {
         if (key == null) {
             throw new IllegalArgumentException("calls get() with null argument");
         }
-        if (key.length() == 0) throw new IllegalArgumentException("key must have length >= 1");
+        if (key.isEmpty()) throw new IllegalArgumentException("key must have length >= 1");
         Node<Value> x = get(root, key, 0);
         if (x == null) return null;
         return x.val;
@@ -120,7 +120,7 @@ public class TST<Value> {
     // return subtrie corresponding to given key
     private Node<Value> get(Node<Value> x, String key, int d) {
         if (x == null) return null;
-        if (key.length() == 0) throw new IllegalArgumentException("key must have length >= 1");
+        if (key.isEmpty()) throw new IllegalArgumentException("key must have length >= 1");
         char c = key.charAt(d);
         if      (c < x.c)              return get(x.left,  key, d);
         else if (c > x.c)              return get(x.right, key, d);
@@ -170,7 +170,7 @@ public class TST<Value> {
         if (query == null) {
             throw new IllegalArgumentException("calls longestPrefixOf() with null argument");
         }
-        if (query.length() == 0) return null;
+        if (query.isEmpty()) return null;
         int length = 0;
         Node<Value> x = root;
         int i = 0;

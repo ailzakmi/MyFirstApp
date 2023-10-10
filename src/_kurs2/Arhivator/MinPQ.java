@@ -1,6 +1,6 @@
 package _kurs2.Arhivator;
 
-/******************************************************************************
+/*
  *  Compilation:  javac MinPQ.java
  *  Execution:    java MinPQ < input.txt
  *  Dependencies: StdIn.java StdOut.java
@@ -17,7 +17,7 @@ package _kurs2.Arhivator;
  *  Can be optimized by replacing full exchanges with half exchanges
  *  (ala insertion sort).
  *
- ******************************************************************************/
+ */
 
 import java.util.Comparator;
 import java.util.Iterator;
@@ -259,7 +259,7 @@ public class MinPQ<Key> implements Iterable<Key> {
 
     private class HeapIterator implements Iterator<Key> {
         // create a new pq
-        private MinPQ<Key> copy;
+        private final MinPQ<Key> copy;
 
         // add all items to copy of heap
         // takes linear time since already in heap order so no keys move

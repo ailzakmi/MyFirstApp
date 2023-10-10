@@ -1,13 +1,13 @@
 package _kurs2.Arhivator;
 
-/******************************************************************************
+/*
  *  Compilation:  javac StdIn.java
  *  Execution:    java StdIn   (interactive test of basic functionality)
  *  Dependencies: none
  *
  *  Reads in data of various types from standard input.
  *
- ******************************************************************************/
+ */
 
 import java.util.ArrayList;
 import java.util.InputMismatchException;

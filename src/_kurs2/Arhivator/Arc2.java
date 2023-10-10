@@ -11,7 +11,7 @@ public class Arc2 {
         ZipOutputStream out = null;
         try {
             out = new ZipOutputStream(new BufferedOutputStream(new FileOutputStream(zipFileName)));
-            byte data[] = new byte[BUFFER];
+            byte[] data = new byte[BUFFER];
             for (int i = 0; i < files.length; i++) {
                 processFile(out, data, files[i]);
             }

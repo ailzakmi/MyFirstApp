@@ -1,6 +1,6 @@
 package _kurs2.Arhivator;
 
-/******************************************************************************
+/*
  *  Compilation:  javac BinaryStdOut.java
  *  Execution:    java BinaryStdOut
  *  Dependencies: none
@@ -11,7 +11,7 @@ package _kurs2.Arhivator;
  *
  *  The bytes written are not aligned.
  *
- ******************************************************************************/
+ */
 
 import java.io.BufferedOutputStream;
 import java.io.IOException;

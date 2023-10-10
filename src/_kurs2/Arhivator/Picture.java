@@ -1,11 +1,11 @@
 package _kurs2.Arhivator;
 
-/******************************************************************************
+/*
  *  Compilation:  javac Picture.java
  *  Execution:    java Picture filename.jpg
  *  Dependencies: none
  *
- ******************************************************************************/
+ */
 
 import java.awt.Color;
 import java.awt.FileDialog;
@@ -282,7 +282,7 @@ public final class Picture implements ActionListener {
      */
     public Picture(String filename) {
         if (filename == null) throw new IllegalArgumentException("constructor argument is null");
-        if (filename.length() == 0) throw new IllegalArgumentException("constructor argument is the empty string");
+        if (filename.isEmpty()) throw new IllegalArgumentException("constructor argument is the empty string");
 
         title = filename;
         try {
@@ -351,7 +351,6 @@ public final class Picture implements ActionListener {
             if (image.getType() != BufferedImage.TYPE_INT_RGB) {
                 BufferedImage imageARGB = new BufferedImage(width, height, BufferedImage.TYPE_INT_ARGB);
                 imageARGB.createGraphics().drawImage(image, 0, 0, null);
-                image = imageARGB;
             }
         }
         catch (IOException ioe) {
@@ -425,7 +424,7 @@ public final class Picture implements ActionListener {
     // getMenuShortcutKeyMask() deprecated in Java 10 but its replacement
     // getMenuShortcutKeyMaskEx() is not available in Java 8
     @SuppressWarnings("deprecation")
-    /**
+    /*
      * Displays the picture in a window on the screen.
      */
     public void show() {
@@ -583,7 +582,7 @@ public final class Picture implements ActionListener {
      */
     public String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append(width +"-by-" + height + " picture (RGB values given in hex)\n");
+        sb.append(width).append("-by-").append(height).append(" picture (RGB values given in hex)\n");
         for (int row = 0; row < height; row++) {
             for (int col = 0; col < width; col++) {
                 int rgb;
@@ -641,7 +640,7 @@ public final class Picture implements ActionListener {
      */
     public void save(String filename) {
         if (filename == null) throw new IllegalArgumentException("argument to save() is null");
-        if (filename.length() == 0) throw new IllegalArgumentException("argument to save() is the empty string");
+        if (filename.isEmpty()) throw new IllegalArgumentException("argument to save() is the empty string");
         File file = new File(filename);
         save(file);
     }

@@ -1,6 +1,6 @@
 package _kurs2.Arhivator;
 
-/******************************************************************************
+/*
  *  Compilation:  javac LZW.java
  *  Execution:    java LZW - < input.txt   (compress)
  *  Execution:    java LZW + < input.txt   (expand)
@@ -11,7 +11,7 @@ package _kurs2.Arhivator;
  *  Compress or expand binary input from standard input using LZW.
  *
 
- ******************************************************************************/
+ */
 
 /**
  *  The {@code LZW} class provides static methods for compressing
@@ -55,7 +55,7 @@ public class LZW {
 
         int code = R+1;  // R is codeword for EOF
 
-        while (input.length() > 0) {
+        while (!input.isEmpty()) {
             String s = st.longestPrefixOf(input);  // Find max prefix match s.
             BinaryStdOut.write(st.get(s), W);      // Print s's encoding.
             int t = s.length();

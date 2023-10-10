@@ -1,6 +1,6 @@
 package _kurs2.Arhivator;
 
-/******************************************************************************
+/*
  *  Compilation:  javac BinaryStdIn.java
  *  Execution:    java BinaryStdIn < input > output
  *  Dependencies: none
@@ -10,7 +10,7 @@ package _kurs2.Arhivator;
  *  % java BinaryStdIn < input.jpg > output.jpg
  *  % diff input.jpg output.jpg
  *
- ******************************************************************************/
+ */
 
 import java.io.BufferedInputStream;
 import java.io.IOException;
@@ -190,7 +190,7 @@ public final class BinaryStdIn {
         for (int i = 0; i < 2; i++) {
             char c = readChar();
             x <<= 8;
-            x |= c;
+            x |= (short) c;
         }
         return x;
     }

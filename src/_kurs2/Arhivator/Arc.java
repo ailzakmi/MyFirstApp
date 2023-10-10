@@ -28,7 +28,7 @@ public class Arc {
         BufferedReader reader = new BufferedReader(new InputStreamReader(
                 new FileInputStream(file), "UTF-8"));
         StringBuilder text = new StringBuilder();
-        String line = null;
+        String line;
         while ((line = reader.readLine()) != null) {
             text.append(line);
         }
@@ -62,7 +62,7 @@ public class Arc {
             }
 
 
-            if (!w.equals(""))
+            if (!w.isEmpty())
                 result.add(dictionary.get(w));
 
 

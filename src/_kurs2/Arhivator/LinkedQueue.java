@@ -1,6 +1,6 @@
 package _kurs2.Arhivator;
 
-/******************************************************************************
+/*
  *  Compilation:  javac LinkedQueue.java
  *  Execution:    java LinkedQueue < input.txt
  *  Dependencies: StdIn.java StdOut.java
@@ -11,7 +11,7 @@ package _kurs2.Arhivator;
  *  % java Queue < tobe.txt
  *  to be or not to be (2 left on queue)
  *
- ******************************************************************************/
+ */
 
 import java.util.Iterator;
 import java.util.NoSuchElementException;
@@ -119,7 +119,7 @@ public class LinkedQueue<Item> implements Iterable<Item> {
     public String toString() {
         StringBuilder s = new StringBuilder();
         for (Item item : this)
-            s.append(item + " ");
+            s.append(item).append(" ");
         return s.toString();
     }
 
