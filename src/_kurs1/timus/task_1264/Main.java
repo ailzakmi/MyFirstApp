@@ -1,0 +1,17 @@
+package _kurs1.timus.task_1264;
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+
+        int a = in.nextInt();
+        int b = in.nextInt();
+
+        b++;
+        a = a * b;
+
+        System.out.println(a);
+    }
+}
